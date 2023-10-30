@@ -23,7 +23,7 @@
       "package": "com.ditod.mathematicians"
     },
     "web": {
-      "favicon": "./assets/favicon.svg"
+      "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
