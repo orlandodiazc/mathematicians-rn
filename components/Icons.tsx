@@ -1,0 +1,58 @@
+import type { LucideProps } from 'lucide-react-native';
+import {
+  Ruler,
+  Grid2x2,
+  ChevronRight,
+  X,
+  Circle,
+  Info,
+  LinkedinIcon,
+  Github,
+  Delete,
+  Divide,
+  Minus,
+  Plus,
+  Equal,
+  Search,
+  ArrowLeft,
+  Calculator,
+  BadgeDollarSign,
+  PencilRuler,
+  Gauge,
+  Dumbbell,
+  Thermometer,
+  Factory,
+  GaugeCircle,
+  Box,
+} from 'lucide-react-native';
+
+export const icons = {
+  pressure: GaugeCircle,
+  energy: Factory,
+  temperature: Thermometer,
+  mass: Dumbbell,
+  speed: Gauge,
+  volume: Box,
+  badgeDollarSign: BadgeDollarSign,
+  calculator: Calculator,
+  pencilRuler: PencilRuler,
+  length: Ruler,
+  area: Grid2x2,
+  chevronRight: ChevronRight,
+  circle: Circle,
+  info: Info,
+  linkedIn: LinkedinIcon,
+  github: Github,
+  delete: Delete,
+  divide: Divide,
+  x: X,
+  substract: Minus,
+  sum: Plus,
+  equal: Equal,
+  search: Search,
+  back: ArrowLeft,
+};
+
+export type NamedIcon = LucideProps & {
+  name: keyof typeof icons;
+};
