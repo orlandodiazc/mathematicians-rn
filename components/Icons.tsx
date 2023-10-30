@@ -24,6 +24,7 @@ import {
   Factory,
   GaugeCircle,
   Box,
+  Download,
 } from 'lucide-react-native';
 
 export const icons = {
@@ -51,6 +52,7 @@ export const icons = {
   equal: Equal,
   search: Search,
   back: ArrowLeft,
+  download: Download,
 };
 
 export type NamedIcon = LucideProps & {

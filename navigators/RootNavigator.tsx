@@ -11,9 +11,7 @@ export function RootNavigator() {
   return (
     <RootStack.Navigator
       screenOptions={{
-        contentStyle: {
-          overflow: 'hidden',
-        },
+        contentStyle: { width: '100%' },
       }}
     >
       <RootStack.Screen
