@@ -11,6 +11,7 @@ export function KeyboardContainer({ children }: KeyboardContainerProps) {
       contentContainerStyle={{
         alignItems: 'center',
         paddingBottom: 10,
+        paddingTop: 5,
         backgroundColor: colors.card,
         flexGrow: 1,
         justifyContent: 'space-around',

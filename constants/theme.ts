@@ -7,6 +7,7 @@ export const lightTheme = {
     background: 'rgb(241, 241, 241)',
     textMuted: '#808080',
     alpha400: 'rgba(0,0,0,0.08)',
+    alpha200: 'rgba(0,0,0,0.02)',
   },
 };
 
@@ -20,5 +21,6 @@ export const darkTheme: ExtendedTheme = {
     background: '#000',
     textMuted: '#808080',
     alpha400: 'rgba(255,255,255,0.3)',
+    alpha200: 'rgba(255,255,255,0.1)',
   },
 };

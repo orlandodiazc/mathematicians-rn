@@ -1,7 +1,8 @@
 import { View } from '@components/Themed';
 import { useTheme } from '@react-navigation/native';
-import { ReactNode } from 'react';
+import { ReactNode, useRef } from 'react';
 import { Pressable, PressableProps, ViewStyle } from 'react-native';
+import { useHover } from 'react-native-web-hooks';
 
 export type ButtonProps = {
   variant?: 'default' | 'outline';
@@ -25,8 +26,11 @@ export function Button({
         }
       : null;
 
+  const ref = useRef(null);
+  const isHovered = useHover(ref);
+
   return (
-    <Pressable onPress={onPress} {...props}>
+    <Pressable onPress={onPress} {...props} ref={ref}>
       {({ pressed }) => (
         <View
           style={[
@@ -34,7 +38,8 @@ export function Button({
             {
               borderRadius: 4,
               justifyContent: 'center',
-              backgroundColor: pressed ? colors.alpha400 : 'transparent',
+              backgroundColor:
+                pressed || isHovered ? colors.alpha200 : 'transparent',
               alignItems: 'center',
               paddingVertical: 8,
               paddingHorizontal: 12,
