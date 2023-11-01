@@ -1,6 +1,6 @@
-import { ExternalLink } from '@components/ExternalLink';
 import { Icons, Text, View } from '@components/Themed';
 import { ExtendedTheme, darkTheme, lightTheme } from '@constants/theme';
+import { A } from '@expo/html-elements';
 import { RootNavigator } from '@navigators/RootNavigator';
 import { RootStackParamList } from '@navigators/types';
 import { LinkingOptions, NavigationContainer } from '@react-navigation/native';
@@ -43,21 +43,23 @@ export default function App() {
           width: '100%',
           flexDirection: 'row',
           overflow: 'hidden',
+          backgroundColor: theme.colors.background,
         }}
       >
         <ScrollView
           style={{
             flex: 1,
-            paddingVertical: 64,
-            backgroundColor: theme.colors.background,
+            paddingVertical: 128,
+            borderEndWidth: 1,
+            borderEndColor: theme.colors.alpha400,
           }}
         >
           <View
             style={{
-              backgroundColor: 'transparent',
               paddingHorizontal: 16,
               maxWidth: 600,
               marginHorizontal: 'auto',
+              backgroundColor: theme.colors.background,
             }}
           >
             <Text
@@ -94,7 +96,7 @@ export default function App() {
                 gap: 16,
               }}
             >
-              <ExternalLink url="https://github.com/orlandodiazc/mathematicians-rn/releases">
+              <A href="https://github.com/orlandodiazc/mathematicians-rn">
                 <View
                   style={{
                     flexDirection: 'row',
@@ -113,8 +115,8 @@ export default function App() {
                     Github
                   </Text>
                 </View>
-              </ExternalLink>
-              <ExternalLink url="https://github.com/orlandodiazc/mathematicians-rn">
+              </A>
+              <A href="https://github.com/orlandodiazc/mathematicians-rn/releases">
                 <View
                   style={{
                     flexDirection: 'row',
@@ -133,7 +135,7 @@ export default function App() {
                     Android APK
                   </Text>
                 </View>
-              </ExternalLink>
+              </A>
             </View>
           </View>
         </ScrollView>

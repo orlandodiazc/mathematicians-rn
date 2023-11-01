@@ -1,5 +1,5 @@
-import { ExternalLink } from '@components/ExternalLink';
 import { Icons, Text, View } from '@components/Themed';
+import { A } from '@expo/html-elements';
 import { useTheme } from '@react-navigation/native';
 
 export function AboutScreen() {
@@ -20,7 +20,7 @@ export function AboutScreen() {
         }}
       />
       <View style={{ flexDirection: 'row', gap: 20 }}>
-        <ExternalLink url="https://www.linkedin.com/in/orlando-diaz-conde">
+        <A href="https://www.linkedin.com/in/orlando-diaz-conde">
           <View
             style={{
               flexDirection: 'row',
@@ -32,8 +32,8 @@ export function AboutScreen() {
             <Icons name="linkedIn" size={22} />
             <Text style={{ textDecorationLine: 'underline' }}>Linked In</Text>
           </View>
-        </ExternalLink>
-        <ExternalLink url="https://github.com/orlandodiazc">
+        </A>
+        <A href="https://github.com/orlandodiazc">
           <View
             style={{
               flexDirection: 'row',
@@ -45,7 +45,7 @@ export function AboutScreen() {
             <Icons name="github" size={22} />
             <Text style={{ textDecorationLine: 'underline' }}>Github</Text>
           </View>
-        </ExternalLink>
+        </A>
       </View>
     </View>
   );

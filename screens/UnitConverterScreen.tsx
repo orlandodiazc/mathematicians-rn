@@ -2,6 +2,7 @@ import { ConverterInputSection } from '@components/ConverterInputSection';
 import { Text, View } from '@components/Themed';
 import UnitsKeyboard from '@components/UnitsKeyboard';
 import { useConverter } from '@hooks/index';
+import { useTheme } from '@react-navigation/native';
 import { RootStackScreenProps } from 'navigators/types';
 import { Input } from 'types';
 
@@ -13,6 +14,8 @@ import {
 type Props = RootStackScreenProps<'Converter'>;
 
 export function UnitConverterScreen({ route }: Props) {
+  const { colors } = useTheme();
+
   const unitList = appMeasureConvert().list(route.params.measure);
 
   const initialInputs: Input[] = [
@@ -37,7 +40,15 @@ export function UnitConverterScreen({ route }: Props) {
 
   return (
     <View style={{ flex: 1 }}>
-      <View style={{ flexGrow: 1, padding: 15, gap: 20 }}>
+      <View
+        style={{
+          flexGrow: 1,
+          padding: 15,
+          gap: 20,
+          borderBlockColor: colors.alpha400,
+          borderBottomWidth: 1,
+        }}
+      >
         {inputsState.inputs ? (
           inputsState.inputs.map((input) => (
             <ConverterInputSection
@@ -50,7 +61,7 @@ export function UnitConverterScreen({ route }: Props) {
             />
           ))
         ) : (
-          <Text>Loading</Text>
+          <Text>Loading...</Text>
         )}
       </View>
       <UnitsKeyboard handleKeyboardPress={handleKeyboardPress} />

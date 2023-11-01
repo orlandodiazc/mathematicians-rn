@@ -2,6 +2,7 @@ import { ConverterInputSection } from '@components/ConverterInputSection';
 import { Text, View } from '@components/Themed';
 import UnitsKeyboard from '@components/UnitsKeyboard';
 import { useConverter } from '@hooks/index';
+import { useTheme } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
 import { ActivityIndicator } from 'react-native';
 
@@ -10,6 +11,8 @@ import { getRates } from './services/exchangesApi';
 import { CurrencyDataProps } from './types';
 
 export function ExchangeScreen() {
+  const { colors } = useTheme();
+
   const [currencyState, setCurrencyState] = useState<{
     data: CurrencyDataProps | null;
     error: Error | null;
@@ -63,7 +66,16 @@ export function ExchangeScreen() {
   }, []);
   return (
     <View style={{ flex: 1 }}>
-      <View style={{ flexBasis: 200, flexGrow: 1, padding: 15, gap: 20 }}>
+      <View
+        style={{
+          flexBasis: 200,
+          flexGrow: 1,
+          padding: 15,
+          gap: 20,
+          borderBlockColor: colors.alpha400,
+          borderBottomWidth: 1,
+        }}
+      >
         {currencyState.error ? (
           <Text>{currencyState.error.message}</Text>
         ) : inputsState.inputs ? (

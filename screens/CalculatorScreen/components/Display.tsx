@@ -1,4 +1,5 @@
 import { Icons, Text, View } from '@components/Themed';
+import { useTheme } from '@react-navigation/native';
 import React, { useState } from 'react';
 import type { LayoutRectangle } from 'react-native';
 import { StyleSheet } from 'react-native';
@@ -10,12 +11,18 @@ export default function Display({
 }: {
   calculatorState: CalculatorState;
 }) {
+  const { colors } = useTheme();
+
   const { total, next, operator } = calculatorState;
   const [displayLayout, setDisplayLayout] = useState<LayoutRectangle>();
-
   const displayTextLength = (total ?? '' + next ?? '').length;
   return (
-    <View style={styles.displayContainer}>
+    <View
+      style={[
+        styles.displayContainer,
+        { borderBlockEndColor: colors.alpha400, borderBottomWidth: 1 },
+      ]}
+    >
       <Text
         style={{ fontSize: displayTextLength < 26 ? 60 : 16 }}
         adjustsFontSizeToFit={displayTextLength < 26}
