@@ -18,7 +18,7 @@ This project was created using:
 
 <!-- Features -->
 
-### Desktop
+### App Screenshots
 
 ![Desktop screenshot](https://raw.githubusercontent.com/orlandodiazc/mathematicians-rn/main/app-screenshot.png)
 
