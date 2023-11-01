@@ -20,7 +20,7 @@ This project was created using:
 
 ### App Screenshots
 
-![Desktop screenshot](https://raw.githubusercontent.com/orlandodiazc/mathematicians-rn/main/public/opengraph-image.png)
+![Desktop screenshot](https://raw.githubusercontent.com/orlandodiazc/mathematicians-rn/main/web/opengraph-image.png)
 
 ## Getting Started <a name="getting-started"></a>
 
