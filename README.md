@@ -18,9 +18,9 @@ This project was created using:
 
 <!-- Features -->
 
-### Desktop
+### App Screenshots
 
-![Desktop screenshot](https://github.com/orlandodiazc/wordle/blob/44595c67d82757aab863e0834211dd509a292426/public/opengraph-image.png)
+![Desktop screenshot](https://raw.githubusercontent.com/orlandodiazc/mathematicians-rn/main/public/opengraph-image.png)
 
 ## Getting Started <a name="getting-started"></a>
 
