@@ -22,9 +22,7 @@
       },
       "package": "com.ditod.mathematicians"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
+    "web": {},
     "extra": {
       "eas": {
         "projectId": "18aeebbd-c892-4fab-b673-53d8c98b519f"
