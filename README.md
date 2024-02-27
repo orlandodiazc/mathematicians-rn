@@ -1,6 +1,6 @@
 # Mathematicians <a name="about-project"></a>
 
-**mathematicians** is an multiplatform app built with React Native. You can use it to perform quick math calculations, convert currencies and physical units.
+**Mathematicians** is an multiplatform app built with React Native. You can use it to perform quick math calculations, convert currencies and physical units.
 
 [Live Site](https://mathematicians.vercel.app/)
 
